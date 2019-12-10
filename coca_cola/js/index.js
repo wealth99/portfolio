@@ -53,17 +53,17 @@ $(document).ready(function(){
     slideBtn.on("click", function(e){
         var index = $(this).index();
         e.preventDefault();
-        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(1000).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},1000)
+        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(700).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},700)
         $(this).addClass("active").siblings().removeClass("active");
         if(nowShow == index) return; // 같은 버튼누르면 이벤트X 
         var prevBanner = banner.eq(nowShow); // 현재 보여지는 배너는 왼쪽으로 나가기  
         prevBanner.stop().animate({
             "left": "-100%"
-        },1500);
+        },700);
         var nextBanner = banner.eq(index); // 선택된 버튼에 해당하는 배너가 오른쪽에서 화면으로 나오도록
         nextBanner.css("left","100%").stop().animate({
             "left": 0,
-        },1500).addClass("active").siblings().removeClass("active");
+        },700).addClass("active").siblings().removeClass("active");
         nowShow = index; // 화면에 보여지는 화면의 순서를 변경하기
     });
 
@@ -71,16 +71,16 @@ $(document).ready(function(){
      $(".rightBtn").on("click",function(){
         index++;
         index == 4 ? index = 0 : false; 
-        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(1000).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},1000)
+        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(700).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},700)
         $(".slideBtn > li").eq(index).addClass("active").siblings().removeClass("active");
         var prevBanner = banner.eq(nowShow); // 현재 보여지는 배너는 왼쪽으로 나가기  
         prevBanner.stop().animate({
             "left": "-100%"
-        },1500);
+        },700);
         var nextBanner = banner.eq(index); // 선택된 버튼에 해당하는 배너가 오른쪽에서 화면으로 나오도록
         nextBanner.css("left","100%").stop().animate({
             "left": 0,
-        },1500).addClass("active").siblings().removeClass("active");
+        },700).addClass("active").siblings().removeClass("active");
         nowShow = index; // 화면에 보여지는 화면의 순서를 변경하기
     });
 
@@ -88,16 +88,16 @@ $(document).ready(function(){
     $(".leftBtn").on("click",function(){
         index--;
         index < 0 ? index = 3 : false; 
-        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(1000).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},1000)
+        $(this).parent().siblings(".banner").find(".moveUp").eq(index).stop().delay(700).animate({"bottom": 0}, 1000).parents("li").siblings().find(".moveUp").stop().delay(1000).animate({"bottom": -50 + "px"},700)
         $(".slideBtn > li").eq(index).addClass("active").siblings().removeClass("active");
         var prevBanner = banner.eq(nowShow); // 현재 보여지는 배너는 오른쪽으로 나가기  
         prevBanner.stop().animate({
             "left": "100%"
-        },1500);
+        },700);
         var nextBanner = banner.eq(index); // 선택된 버튼에 해당하는 배너가 왼쪽에서 화면으로 나오도록
         nextBanner.css("left","-100%").stop().animate({
             "left": 0
-        },1500).addClass("active").siblings().removeClass("active");
+        },700).addClass("active").siblings().removeClass("active");
         nowShow = index; // 화면에 보여지는 화면의 순서를 변경하기
     });
 
