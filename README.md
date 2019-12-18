@@ -4,4 +4,4 @@
 
 2. missha renewal (https://wealth99.github.io/missha)
 
-3. korean air renewal (https://wealth99.github.io/korean-air)
+3. korean-air renewal (https://wealth99.github.io/korean-air)
